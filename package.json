@@ -16,6 +16,10 @@
   "dependencies": {
     "@jest/globals": "^29.7.0",
     "@types/jest": "^29.5.13",
+    "airtable": "^0.12.2",
+    "dropbox": "^10.34.0",
+    "envalid": "^8.0.0",
+    "save": "^2.9.0",
     "ts-jest": "^29.2.5"
   }
 }
