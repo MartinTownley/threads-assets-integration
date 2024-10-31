@@ -19,6 +19,7 @@
     "airtable": "^0.12.2",
     "dropbox": "^10.34.0",
     "envalid": "^8.0.0",
+    "isomorphic-fetch": "^3.0.0",
     "save": "^2.9.0",
     "ts-jest": "^29.2.5",
     "zod": "^3.23.8"

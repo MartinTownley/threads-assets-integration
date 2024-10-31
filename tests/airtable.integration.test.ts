@@ -13,32 +13,32 @@ const base = new Airtable({ apiKey: validEnv.AIRTABLE_TOKEN }).base(
 
 describe("Airtable Integration Test", () => {
   it("should fetch data from Airtable and return the correct fields", async () => {
-    console.log("strating integration test...");
+    console.log("starting integration test...");
 
     try {
       const tableName = "Show Onboarding Table";
       console.log("Fetching records from table:", tableName);
 
       const records = await base(tableName).select().firstPage();
-      console.log(
-        "Image:",
-        records[6].fields["Default Image File for your Show"]
-      );
+      // console.log(
+      //   "Image:",
+      //   records[6].fields["Default Image File for your Show"]
+      // );
 
       const data = records.map(
         (record) => record.fields as unknown as AirtableRecordFields
       );
 
-      console.log("Fetched data:", data);
+      // console.log("Fetched data:", data);
 
       expect(data.length).toBeGreaterThan(0);
 
       data.forEach((record) => {
         const validationResult = AirtableRecordSchema.safeParse(record);
         if (!validationResult.success) {
-          console.error("Validation error:", validationResult.error);
+          // console.error("Validation error:", validationResult.error);
         } else {
-          console.log("Validated record:", validationResult.data);
+          // console.log("Validated record:", validationResult.data);
         }
       });
     } catch (error) {
